@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     private static final String TAG = "SignInActivity";
 
+    private static final String TAG2 = "SignInActivity2";
 
     CallbackManager callbackManager;
     //private AccessToken accessToken;
