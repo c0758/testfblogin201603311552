@@ -251,4 +251,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
     }
+
+    //fortest
 }
