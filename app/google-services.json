@@ -1,0 +1,136 @@
+{
+  "project_info": {
+    "project_id": "pdc-12f-test-20151102-gcm",
+    "project_number": "287069282599",
+    "name": "PDC-12f-test-20151102-GCM"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287069282599:android:23cad0244928680e",
+        "client_id": "android:com.inventec.rolex20151230",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.inventec.rolex20151230",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287069282599-bv2oi34j9nd0bk562bsa5d1026e58rnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-75475889-1"
+          }
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287069282599:android:6922853b397c81cd",
+        "client_id": "android:com.example.iec040398.testgoogleanalytics20160328",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.example.iec040398.testgoogleanalytics20160328",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287069282599-bv2oi34j9nd0bk562bsa5d1026e58rnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-75475889-2"
+          }
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287069282599:android:4ade60f914d18cb3",
+        "client_id": "android:com.example.testfblogin201603311552",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.example.testfblogin201603311552",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287069282599-qqq85r7ae6pfrhvhgocbcvtqtbog7se4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.testfblogin201603311552",
+            "certificate_hash": "59131CE408CF0FF9C4437BD15642E7BC46C5C0AA"
+          }
+        },
+        {
+          "client_id": "287069282599-bv2oi34j9nd0bk562bsa5d1026e58rnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
