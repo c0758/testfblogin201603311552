@@ -7,6 +7,8 @@ openssl-0.9.8h-1-bin\bin\openssl.exe複製到你的keystore位置
 
 FB login: 
 https://developers.facebook.com/products/login
+一些要註冊的東西: https://developers.facebook.com/quickstarts/
 
 GOOGLE login: 
 https://developers.google.com/identity/sign-in/android/start-integrating
+一些要註冊的東西: https://console.developers.google.com/projectselector/apis/credentials

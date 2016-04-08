@@ -2,7 +2,8 @@
     <string name="app_name">testfblogin201603311552</string>
 
     <string name="facebook_app_id">1685775991675674</string>
-    <string name="server_client_id">287069282599-bv2oi34j9nd0bk562bsa5d1026e58rnl.apps.googleusercontent.com</string>
+    <!--<string name="server_client_id">287069282599-bv2oi34j9nd0bk562bsa5d1026e58rnl.apps.googleusercontent.com</string>-->
+    <string name="server_client_id">287069282599-dlimrte1rs5rhaso4qvrgbsj7binnqm3.apps.googleusercontent.com</string>
     <!-- Button labels -->
     <string name="sign_out">Sign Out</string>
     <string name="disconnect">Disconnect</string>
