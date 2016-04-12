@@ -144,6 +144,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             handleSignInResult(result);
 
             GoogleSignInAccount acct = result.getSignInAccount();
+            if(acct==null) return; // Log.i("error","acct= "+acct);
+
             String personName = acct.getDisplayName();
             String personEmail = acct.getEmail();
             String personId = acct.getId();
