@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
@@ -42,8 +43,9 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
-    private static final String TAG = "SignInActivity";
 
+
+    private static final String TAG = "SignInActivity";
     private static final String TAG2 = "SignInActivity2";
 
     CallbackManager callbackManager;
@@ -52,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private GoogleApiClient mGoogleApiClient;
     private static final int RC_SIGN_IN = 9001;
     private TextView mStatusTextView;
+
+    //
+    private EditText targetIP;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +133,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         findViewById(R.id.sign_out_button).setOnClickListener(this);
         findViewById(R.id.disconnect_button).setOnClickListener(this);
 
+///////////////////
+
+        targetIP = (EditText) findViewById(R.id.targetIP);
 
     }
 
