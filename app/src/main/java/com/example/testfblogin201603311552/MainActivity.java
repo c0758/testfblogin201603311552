@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -39,6 +40,9 @@ import com.google.android.gms.common.api.Status;
 
 import org.json.JSONObject;
 
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
@@ -55,9 +59,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private static final int RC_SIGN_IN = 9001;
     private TextView mStatusTextView;
 
-    //
+    // connect
     private EditText targetIP;
-
+    String str1 = "0", str2 = "0";
+    private Button btn;
+    private TextView tv1, tv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,18 +140,55 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         findViewById(R.id.disconnect_button).setOnClickListener(this);
 
 ///////////////////
-
         targetIP = (EditText) findViewById(R.id.targetIP);
+        tv1 = (TextView) findViewById(R.id.textView);
+        tv2 = (TextView) findViewById(R.id.textView2);
+        btn = (Button) findViewById(R.id.connectBtn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                Thread t = new thread();
+                t.start();
+                try {
+
+                    t.sleep(3000);
+                } catch (InterruptedException e) {
+                }
+                tv1.setText(str1);
+                tv2.setText(str2);
+            }
+        });
 
     }
+    class thread extends Thread {
+        public void run() {
+            try {
+                System.out.println("Waitting to connect......");
+                String server = targetIP.getText().toString();
+                int servPort = 1026;
+                Socket socket = new Socket(server, servPort);
+                InputStream in = socket.getInputStream();
+                OutputStream out = socket.getOutputStream();
+                System.out.println("Connected!!");
+                byte[] rebyte = new byte[80];
+                in.read(rebyte);
+                str2 = "(Client端)接收的文字:" + new String(new String(rebyte));
 
+                String str = "android client string 20160413";
+                str1 = "(Client端)傳送的文字:" + str;
+                byte[] sendstr = new byte[80];
+                System.arraycopy(str.getBytes(), 0, sendstr, 0, str.length());
+                out.write(sendstr);
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        }
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Log.d("FBXXX", "onActivityResult");
         callbackManager.onActivityResult(requestCode, resultCode, data);
-
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
